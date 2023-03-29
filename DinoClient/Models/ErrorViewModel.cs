@@ -1,3 +1,5 @@
+#nullable enable
+
 namespace DinoClient.Models;
 
 public class ErrorViewModel

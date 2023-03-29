@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Animals";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Welcome to the Cretaceous Park!</h1>
+  <p>Get to know a few of <a href="/animals">our animals</a> from the Cretaceous period!</p>
+</div>
+
+<h1>All Cretaceous Animals:</h1>
+
+<ol>
+  @foreach (Animal animal in Model)
+  {
+    <li><strong>@animal.Name</strong> the @animal.Species | <a href="/Animals/Details/@(animal.AnimalId)">View Details</li>
+  }
+</ol>
+
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Animals" asp-action="Index">See Animals</a>
+</li>
